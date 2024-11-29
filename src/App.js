@@ -9,12 +9,13 @@ function App() {
   const handleClick = (value) => {
     if (value === 'incrementBy2') {
       // Increment the current input by 2
-      const incrementedValue = parseFloat(input) + 2;
+      const incrementedValue = parseFloat(input) - 2;
       setInput(incrementedValue.toString());
     } else {
-      setInput(input + value);
+      setInput(input - value);
     }
   };
+  
 
   // Function to handle clearing the input
   const handleClear = () => {
@@ -50,7 +51,7 @@ function App() {
         <button onClick={handleClear}>C</button>
         <button onClick={handleEvaluate}>=</button>
         <button onClick={() => handleClick('/')}>/</button>
-        <button onClick={() => handleClick('incrementBy2')}>+2</button> {/* New Button */}
+        <button onClick={() => handleClick('incrementBy2')}>-2</button> {/* New Button */}
       </div>
     </div>
   );
